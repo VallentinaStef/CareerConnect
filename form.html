@@ -1,9 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buat Profil - CareerConnect</title>
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <h1>Buat Profil Kandidat</h1>
+
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="form.html">Profil</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Form Data Fresh Graduate</h2>
+
+        <form>
+          <label for="nama"> Nama Lengkap: </label>
+          <br />
+
+          <input type="text" id="nama" name="nama" />
+          <br /><br />
+
+          <label for="email"> Email: </label>
+          <br />
+
+          <input type="email" id="email" name="email" />
+          <br /><br />
+
+          <label for="pendidikan"> Pendidikan Terakhir: </label>
+          <br />
+
+          <select id="pendidikan" name="pendidikan">
+            <option>S1</option>
+            <option>D3</option>
+            <option>SMA</option>
+          </select>
+
+          <br /><br />
+
+          <label for="skill"> Keahlian: </label>
+
+          <br />
+
+          <textarea id="skill" name="skill"></textarea>
+
+          <br /><br />
+
+          <label for="cv"> Upload CV: </label>
+
+          <br />
+
+          <input type="file" id="cv" name="cv" />
+
+          <br /><br />
+
+          <button type="submit">Simpan Profil</button>
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
