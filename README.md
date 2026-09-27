@@ -7,3 +7,6 @@ tampilan main
 
 tampilan detail loker
 <img width="512" height="305" alt="image" src="https://github.com/user-attachments/assets/3fc18b41-3a05-491c-b7f2-d2a5dc293cb2" />
+
+tampilan form
+<img width="234" height="367" alt="image" src="https://github.com/user-attachments/assets/40d1cd8c-71a7-48b3-855e-98101e57b066" />
