@@ -251,3 +251,50 @@ footer {
   background-color: #172b4d;
   color: #d1d5db;
 }
+
+/* 
+media query */
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  main {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  section,
+  article {
+    padding: 20px;
+  }
+
+  table {
+    font-size: 14px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
