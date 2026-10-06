@@ -15,3 +15,56 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background-color: white;
+  padding: 10px 8%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+}
+
+header p {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+nav a {
+  background-color: transparent;
+  color: #374151;
+  padding: 7px 13px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background-color: #eef5ff;
+  color: #1769e0;
+}
