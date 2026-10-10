@@ -7,57 +7,70 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <a href="index.html" class="logo">
         <img src="assets/images/logo.png" alt="CareerConnect" />
       </a>
-      <p>Platform pencarian kerja untuk fresh graduate.</p>
 
       <nav>
         <a href="index.html">Beranda</a>
-        <a href="form.html">Buat Profil</a>
+        <a href="jobs.html">Cari Kerja</a>
+        <a href="saved-jobs.html">Tersimpan</a>
+        <a href="applications.html">Lamaran Saya</a>
+        <a href="profile.html">Profil</a>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="hero">
+        <div class="hero-content">
+          <span class="hero-label">CAREERCONNECT</span>
+          <h2>Temukan Karier Impianmu</h2>
+          <p>
+            Mulai perjalanan kariermu dan temukan pekerjaan yang sesuai dengan
+            kemampuanmu.
+          </p>
+
+          <form class="search-box" action="jobs.html">
+            <input
+              type="search"
+              name="keyword"
+              placeholder="Jabatan atau perusahaan"
+            />
+            <input type="text" name="location" placeholder="Kota atau lokasi" />
+            <button type="submit">Cari Lowongan</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="job-section">
         <h2>Lowongan Terbaru</h2>
+        <p>Temukan peluang kerja yang cocok untukmu.</p>
 
-        <img
-          src="assets/images/logo.png"
-          alt="Logo CareerConnect sebagai platform pencarian kerja"
-        />
+        <div class="job-grid">
+          <article class="job-card">
+            <h3>Frontend Developer</h3>
+            <p class="company">PT Digital Indonesia</p>
+            <p>Bandung · Full Time</p>
+            <a href="detail.html">Lihat Detail</a>
+          </article>
 
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Posisi</th>
-              <th>Perusahaan</th>
-              <th>Lokasi</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
+          <article class="job-card">
+            <h3>UI/UX Designer</h3>
+            <p class="company">Creative Studio</p>
+            <p>Jakarta · Internship</p>
+            <a href="detail.html">Lihat Detail</a>
+          </article>
 
-          <tbody>
-            <tr>
-              <td>Frontend Developer</td>
-              <td>Google Indonesia</td>
-              <td>Jakarta</td>
-              <td>
-                <a href="detail.html">Lihat Detail</a>
-              </td>
-            </tr>
+          <article class="job-card">
+            <h3>Backend Developer</h3>
+            <p class="company">Tech Solutions</p>
+            <p>Remote · Full Time</p>
+            <a href="detail.html">Lihat Detail</a>
+          </article>
+        </div>
 
-            <tr>
-              <td>UI/UX Designer</td>
-              <td>Creative Studio</td>
-              <td>Bandung</td>
-              <td>
-                <a href="detail.html">Lihat Detail</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <a href="jobs.html" class="all-jobs"> Lihat Semua Lowongan → </a>
       </section>
     </main>
     <footer>
