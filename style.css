@@ -22,6 +22,16 @@ body {
 .bg-navy {
   background: var(--navy) !important;
 }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  display: block;
+}
 .hero {
   background: linear-gradient(120deg, #10243e, #1d4483);
   color: white;

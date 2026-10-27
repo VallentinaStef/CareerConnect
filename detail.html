@@ -1,47 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail Lowongan - CareerConnect</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Detail Pekerjaan — CareerConnect</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body>
-    <header>
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="CareerConnect" />
-      </a>
-      <nav>
-        <a href="index.html">Kembali</a>
-      </nav>
-    </header>
-
-    <main>
-      <article>
-        <h2>Frontend Developer</h2>
-
-        <img
-          src="assets/images/perusahaan1.png"
-          alt="Logo perusahaan penyedia lowongan Frontend Developer"
-        />
-
-        <p>Perusahaan: Google Indonesia</p>
-
-        <p>
-          Posisi ini bertanggung jawab dalam mengembangkan tampilan website
-          menggunakan teknologi frontend.
-        </p>
-
-        <h3>Kualifikasi</h3>
-
-        <ul>
-          <li>Memahami HTML, CSS, dan JavaScript</li>
-          <li>Mampu bekerja dalam tim</li>
-          <li>Memiliki portofolio proyek</li>
-        </ul>
-
-        <a href="form.html"> Lamar Sekarang </a>
-      </article>
+  <body data-page="detail">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/images/logo.png" alt="CareerConnect" /> </a
+        ><button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs.html">Lowongan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saved-jobs.html">Tersimpan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="applications.html">Lamaran</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cv-builder.html">CV Builder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Admin Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container py-5">
+      <a href="jobs.html" class="text-decoration-none d-inline-block mb-4"
+        >← Kembali ke daftar lowongan</a
+      >
+      <div id="jobDetail" class="row g-4" aria-live="polite"></div>
     </main>
+    <footer class="footer mt-5">
+      <div class="container">© 2026 CareerConnect • Demo tanpa backend.</div>
+    </footer>
+    <div id="toastNotice" class="alert alert-success" role="status"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
