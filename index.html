@@ -1,80 +1,194 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CareerConnect</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CareerConnect — Temukan Karier Pertamamu</title>
+    <meta
+      name="description"
+      content="CareerConnect membantu fresh graduate mencari pekerjaan sesuai keahlian dan minat."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="site-header">
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo.png" alt="CareerConnect" />
-      </a>
-
-      <nav>
-        <a href="index.html">Beranda</a>
-        <a href="jobs.html">Cari Kerja</a>
-        <a href="saved-jobs.html">Tersimpan</a>
-        <a href="applications.html">Lamaran Saya</a>
-        <a href="profile.html">Profil</a>
-      </nav>
+  <body data-page="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">✦ CareerConnect</a
+        ><button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs.html">Lowongan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saved-jobs.html">Tersimpan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="applications.html">Lamaran</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cv-builder.html">CV Builder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="admin.html">Admin Demo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge bg-light text-primary mb-3 px-3 py-2"
+              >Untuk fresh graduate & pencari kerja pemula</span
+            >
+            <h1 class="display-5 mb-3">
+              Langkah pertama menuju
+              <span class="text-info">karier impian</span> dimulai di sini.
+            </h1>
+            <p class="lead opacity-75 mb-4">
+              Temukan lowongan yang cocok dengan skill, minat, dan lokasi
+              pilihanmu.
+            </p>
+            <form id="heroSearch" class="row g-2">
+              <div class="col-sm-8">
+                <label class="visually-hidden" for="homeQuery"
+                  >Cari pekerjaan</label
+                ><input
+                  class="form-control form-control-lg"
+                  id="homeQuery"
+                  placeholder="Contoh: Frontend Developer"
+                  required
+                />
+              </div>
+              <div class="col-sm-4 d-grid">
+                <button
+                  class="btn btn-info btn-lg text-dark fw-semibold"
+                  type="submit"
+                >
+                  Cari Pekerjaan →
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-blob">
+              <div class="fs-1 mb-3" aria-hidden="true">💼</div>
+              <h2 class="h4 fw-bold">Karier dimulai dari peluang</h2>
+              <p class="mb-3 opacity-75">
+                Lowongan entry-level, magang, dan pekerjaan pertama untuk kamu.
+              </p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-light text-dark">Fresh Graduate</span
+                ><span class="badge bg-light text-dark">Entry Level</span
+                ><span class="badge bg-light text-dark">Internship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-
     <main>
-      <section class="hero">
-        <div class="hero-content">
-          <span class="hero-label">CAREERCONNECT</span>
-          <h2>Temukan Karier Impianmu</h2>
-          <p>
-            Mulai perjalanan kariermu dan temukan pekerjaan yang sesuai dengan
-            kemampuanmu.
-          </p>
-
-          <form class="search-box" action="jobs.html">
-            <input
-              type="search"
-              name="keyword"
-              placeholder="Jabatan atau perusahaan"
-            />
-            <input type="text" name="location" placeholder="Kota atau lokasi" />
-            <button type="submit">Cari Lowongan</button>
-          </form>
+      <section class="container py-5">
+        <div class="row g-3 mb-5">
+          <div class="col-sm-4">
+            <div class="stat-card">
+              <div class="stat-number" id="statJobs">0</div>
+              <div class="text-muted-custom">Lowongan tersedia</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="stat-card">
+              <div class="stat-number" id="statCompanies">0</div>
+              <div class="text-muted-custom">Perusahaan contoh</div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="stat-card">
+              <div class="stat-number" id="statRemote">0</div>
+              <div class="text-muted-custom">Lowongan remote</div>
+            </div>
+          </div>
         </div>
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+        >
+          <div>
+            <h2 class="section-title mb-1">Lowongan Terbaru</h2>
+            <p class="text-muted-custom mb-0">
+              Peluang yang bisa kamu jelajahi sekarang.
+            </p>
+          </div>
+          <a href="jobs.html" class="btn btn-outline-primary">Lihat Semua →</a>
+        </div>
+        <div id="featuredJobs" class="row g-3" aria-live="polite"></div>
       </section>
-
-      <section class="job-section">
-        <h2>Lowongan Terbaru</h2>
-        <p>Temukan peluang kerja yang cocok untukmu.</p>
-
-        <div class="job-grid">
-          <article class="job-card">
-            <h3>Frontend Developer</h3>
-            <p class="company">PT Digital Indonesia</p>
-            <p>Bandung · Full Time</p>
-            <a href="detail.html">Lihat Detail</a>
-          </article>
-
-          <article class="job-card">
-            <h3>UI/UX Designer</h3>
-            <p class="company">Creative Studio</p>
-            <p>Jakarta · Internship</p>
-            <a href="detail.html">Lihat Detail</a>
-          </article>
-
-          <article class="job-card">
-            <h3>Backend Developer</h3>
-            <p class="company">Tech Solutions</p>
-            <p>Remote · Full Time</p>
-            <a href="detail.html">Lihat Detail</a>
-          </article>
+      <section class="bg-white py-5">
+        <div class="container">
+          <h2 class="section-title mb-4">Cara menggunakan CareerConnect</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="stat-card h-100">
+                <span class="badge badge-soft mb-3">01</span>
+                <h3 class="h5">Temukan lowongan</h3>
+                <p class="mb-0 text-muted-custom">
+                  Cari berdasarkan posisi, lokasi, atau jenis pekerjaan.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="stat-card h-100">
+                <span class="badge badge-soft mb-3">02</span>
+                <h3 class="h5">Lihat detail</h3>
+                <p class="mb-0 text-muted-custom">
+                  Baca persyaratan dan deskripsi pekerjaan.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="stat-card h-100">
+                <span class="badge badge-soft mb-3">03</span>
+                <h3 class="h5">Siapkan profil</h3>
+                <p class="mb-0 text-muted-custom">
+                  Isi profil dan catat skill agar lebih siap melamar.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <a href="jobs.html" class="all-jobs"> Lihat Semua Lowongan → </a>
       </section>
     </main>
-    <footer>
-      <p>© 2026 CareerConnect</p>
+    <footer class="footer">
+      <div class="container d-flex justify-content-between flex-wrap gap-2">
+        <span>© 2026 CareerConnect • Project pembelajaran</span
+        ><span>Data lowongan merupakan data simulasi.</span>
+      </div>
     </footer>
+    <div id="toastNotice" class="alert alert-success" role="status"></div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
